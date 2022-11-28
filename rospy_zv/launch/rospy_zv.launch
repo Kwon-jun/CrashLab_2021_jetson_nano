@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<launch>
+
+   <include file="$(find usb_cam)/launch/usb_cam-test.launch"/>
+
+   <include file="$(find darknet_ros)/launch/darknet_ros.launch"/>
+
+   <node name="bbox_subpub" pkg="rospy_zv" type="bbox_subpub.py" output="screen"/>
+
+</launch>
